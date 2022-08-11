@@ -1,0 +1,57 @@
+"set line numbers
+set number
+set relativenumber
+
+"turn syntax on
+syntax on
+
+"incremental search on
+set incsearch
+
+"completion options
+set ignorecase
+set infercase
+set wildmenu
+set wildignorecase
+set wildmode=list:longest,full
+
+" virtual edit - cursor can go anywhere
+" set ve=all
+set hidden
+
+"default clipboard
+set clipboard=unnamed
+
+"tab options
+set tabstop=4
+set expandtab
+set shiftwidth=4
+
+"hide search results upon escape
+nnoremap <silent> <esc> :noh<cr><esc>
+
+"auto indent
+set autoindent
+
+
+"These are to cancel the default behavior of d, D, c, C
+"to put the text they delete in the default register.
+"Note that this means e.g. "ad won't copy the text into
+"register a anymore.  You have to explicitly yank it.
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
+nnoremap s "_s
+vnoremap s "_s
+nnoremap S "_S
+vnoremap S "_S
+nnoremap x "_x
+vnoremap x "_x
+nnoremap X "_X
+vnoremap X "_X
+vnoremap p pgvy
+vnoremap P Pgvy
+
+"select pasted text (last changed text)
+nnoremap gh `[v`]
