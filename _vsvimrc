@@ -28,7 +28,7 @@ set expandtab
 set shiftwidth=4
 
 "hide search results upon escape
-nnoremap <silent> <esc> :noh<cr><esc>
+nnoremap <nowait><silent> <esc><esc> :noh<cr><esc>
 
 "auto indent
 set autoindent
